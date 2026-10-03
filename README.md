@@ -1,7 +1,7 @@
 # Municipal Financial Management System (MFMS)
 
 ## Project Overview
-This project is a C-based municipal financial management application developed for PAP521S (Programming in Practice) at the Namibia University of Science and Technology (NUST).
+This project is a C-based municipal financial management application developed by students for PAP521S (Programming in Practice) at the Namibia University of Science and Technology (NUST).
 
 ## Group Details
 * **Course:** PAP521S - Programming in Practice
