@@ -1,24 +1,26 @@
 #ifndef ASSETS_H
 #define ASSETS_H
 
-#define MAX_ASSETS 50
-#define STR_LEN 50
+#define MAX_ASSETS 100
+#define STR_LEN    50
 
 typedef struct {
-    char id[STR_LEN];
-    char name[STR_LEN];
-    char type[STR_LEN];
+    char   id[STR_LEN];
+    char   name[STR_LEN];
+    char   type[STR_LEN];
     double value;
-    char department[STR_LEN];
-    char condition[STR_LEN];
+    char   department[STR_LEN];
+    char   condition[STR_LEN];
 } Asset;
 
 extern Asset assets[MAX_ASSETS];
-extern int asset_count;
+extern int   asset_count;
 
 void assetMenu(void);
 void addAsset(void);
 void displayAssets(void);
 void searchAsset(void);
+void searchAssetByDepartment(void);
+int  findAssetIndex(const char *id);
 
 #endif
