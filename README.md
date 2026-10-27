@@ -1,32 +1,40 @@
-# Municipal Financial Management System (MFMS)
+# Municipal Financial Management System (MFMS) - Project A
 
-## Project Overview
-This project is a C-based municipal financial management application developed by students for PAP521S (Programming in Practice) at the Namibia University of Science and Technology (NUST).
+**Course:** PAP521S - Programming in Practice, NUST
+**Group number:** ___
+**Language / tools:** ANSI C (C99), Visual Studio Code, GCC, Git & GitHub
 
-## Group Details
-* **Course:** PAP521S - Programming in Practice
-* **Development Environment:** VS Code + GCC
-* **Language Standard:** ANSI C (C99)
+## Group members and responsibilities
 
-## Team Members & Responsibilities
-* **Student 1:** Employee Management Module (`employees.c`, `employees.h`)
-* **Student 2:** Budget Management Module (`budget.c`, `budget.h`)
-* **Student 3:** Supplier Management Module (`suppliers.c`, `suppliers.h`)
-* **Student 4:** Asset Management Module (`assets.c`, `assets.h`)
-* **Student 5:** Reports Module (`reports.c`, `reports.h`)
-* **Student 6:** Main Integration & Data Validation (`main.c`)
-* **Student 7:** Testing, Documentation, Git Coordination (`README.md`, Technical Report)
+| # | Student name | Student number | Responsibility |
+|---|---|---|---|
+| 1 | Vilio N Kakwambi | 226135365 | main.c, utils.c/h, GitHub setup, compiling and testing |
+| 2 | Peter-John Einbeck | 219148457 | suppliers.c/h |
+| 3 | Ngombe Mundukove | 226031837 | budget.c/h |
+| 4 | Hamutenya SS | 223063932 | reports.c/h |
+| 5 | Hamukwaya Jason | 221132147 | employees.c/h |
+| 6 | Ndishimonima S | 221038507 | assets.c/h |
 
-## System Features
-* **Employee Management:** Add, search, view, and calculate net salary (Basic + Allowances).
-* **Budget Management:** Track departmental budgets, log expenditure, and identify over-budget departments.
-* **Supplier Management:** Maintain municipal supplier details with search capabilities.
-* **Asset Management:** Record and search municipal equipment, vehicles, and assets.
-* **Reports:** Generate summary data across all system modules.
+## Project description
 
-## How to Compile and Run
-Using GCC in terminal:
-```bash
-gcc -std=c99 main.c employees.c budget.c suppliers.c assets.c reports.c -o mfms
-./mfms 
-That's our template
+A menu-driven console application for managing a municipality's employees and salaries, department budgets, suppliers and assets, with summary reports. Data is stored in arrays of structs in memory.
+
+## System features
+
+- Main menu with clear navigation and invalid-choice handling
+- Employees: add, display, search (ID or name), salary calculation (basic + housing + transport, 7% deduction)
+- Budget: department budgets, expenditure entry, remaining budget, WITHIN BUDGET / EXCEEDED status, departments over budget
+- Suppliers: ID, name, email, telephone, town; add, display, search by ID/name and by town
+- Assets: ID, name, type, purchase value, department, condition; add, display, search
+- Reports: employee, budget, supplier and asset reports
+- Validation: no negative values, no empty names, no duplicate IDs, email/phone checks
+
+## Compilation
+
+    gcc -std=c99 -Wall -Wextra -pedantic -o mfms main.c employees.c budget.c suppliers.c assets.c reports.c utils.c
+
+Or run `make`.
+
+## How to run
+
+Windows: `.\mfms.exe`   Linux/macOS: `./mfms`
